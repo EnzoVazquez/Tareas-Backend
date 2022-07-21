@@ -22,4 +22,25 @@ router.get('/:id', async(req,res)=>{
     }
 })
 
+//agregar producto
+router.post('/', async(req,res)=>{
+    let producto = req.body;
+    res.send({status: success});
+    await utilidades.save(producto);
+})
+
+//actualizar producto
+router.put('/', async(req,res)=>{
+    let producto = req.body;
+    res.send({status: success});
+    await utilidades.update(producto);
+})
+
+//borrar producto
+router.delete('/', async(req,res)=>{
+    let id = req.body;
+    res.send({status: success});
+    await utilidades.deleteById(id);
+})
+
 export default router;

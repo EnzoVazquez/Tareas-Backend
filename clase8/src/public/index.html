@@ -7,6 +7,44 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hola</p>
+    <div>
+        <h2>Actualiza un producto</h2>
+    </div>
+    <div>
+        <form id="actualizar">
+            <label>id</label>
+            <input type="number" name="id">
+            <label>title</label>
+            <input type="text" name="title">
+            <label>price</label>
+            <input type="number" name="price">
+            <label>thumbnail</label>
+            <input type="text" name="thumbnail">
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <h2>Agrega un producto</h2>
+        <div>
+            <form id="agregar">
+                <label>title</label>
+                <input type="text">
+                <label>price</label>
+                <input type="number">
+                <label>thumbnail</label>
+                <input type="text">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <div>
+        <h2>Borrar por id</h2>
+        <form id="delete">
+            <label>id</label>
+            <input type="number">
+            <input type="submit">
+        </form>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>
