@@ -6,7 +6,7 @@ const updateSubmit = (e, form, route) =>{
     newInfo.forEach((value, key)=>obj[key]=value);
     fetch(route,{
         method:"PUT",
-        body:newInfo
+        body:obj
     })
 }
 
@@ -20,7 +20,7 @@ const handleSubmit = (e, form, route) =>{
     newInfo.forEach((value, key)=>obj[key]=value);
     fetch(route,{
         method:"POST",
-        body: newInfo
+        body: obj
     })
 }
 
@@ -34,7 +34,7 @@ const deleteSubmit = (e, form, route)=>{
     newInfo.forEach((value, key)=>obj[key]=value);
     fetch(route,{
         method:"DELETE",
-        body: newInfo
+        body: obj
     })
 }
 
