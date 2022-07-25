@@ -2,6 +2,8 @@ let update = document.getElementById('actualizar');
 const updateSubmit = (e, form, route) =>{
     e.preventDefault();
     let newInfo = new FormData(form);
+    let obj = {};
+    newInfo.forEach((value, key)=>obj[key]=value);
     fetch(route,{
         method:"PUT",
         body:newInfo
@@ -14,6 +16,8 @@ let add = document.getElementById('agregar');
 const handleSubmit = (e, form, route) =>{
     e.preventDefault();
     let newInfo = new FormData(form);
+    let obj = {};
+    newInfo.forEach((value, key)=>obj[key]=value);
     fetch(route,{
         method:"POST",
         body: newInfo
@@ -26,6 +30,8 @@ let borrar = document.getElementById('delete');
 const deleteSubmit = (e, form, route)=>{
     e.preventDefault();
     let newInfo = new FormData(form);
+    let obj = {};
+    newInfo.forEach((value, key)=>obj[key]=value);
     fetch(route,{
         method:"DELETE",
         body: newInfo
